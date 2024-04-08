@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hinative</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+   <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                  </button>
+                                                                                                                                                                                                          <form class="form-inline my-2 my-lg-0">
+                                                                                                                                                                                                                  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                                                                                                                                                                                                                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                                                                                                                                                                                                                            </form>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                          <ul class="navbar-nav mr-auto">
+                                  <li class="nav-item active">
+                                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                                                  </li>
+                                                        <li class="nav-item">
+                                                                  <a class="nav-link" href="#">Link</a>
+                                                                        </li>
+                                                                              <li class="nav-item dropdown">
+                                                                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                                                    Demander
+                                                                                                            </a>
+                                                                                                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                                                                                      choisir un modèle de question
+                                                                                                                                <a class="dropdown-item" href="#">comment dit on cela</a>
+                                                                                                                                <a class="dropdown-item" href="#">est-ce que ça semble naturel</a>
+                                                                                                                                          <a class="dropdown-item" href="#">journal de langue étrangère</a>
+                                                                                                                                          <a class="dropdown-item" href="#">qu'est-ce que cela signifie</a>
+                                                                                                                                          <a class="dropdown-item" href="#">quelle est la différence</a>
+                                                                                                                                          <a class="dropdown-item" href="#">veuillez me montrer des exemples de phrases contenant ~~</a>
+                                                                                                                                          <a class="dropdown-item" href="#">veuillez me montrer comment se prononce</a>
+                                                                                                                                          <a class="dropdown-item" href="#">comment qualifiez vous ma prononciation</a>
+                                                                                                                                          <a class="dropdown-item" href="#">posez une question à propos d'un pays ou d'une région</a>
+                                                                                                                                          <a class="dropdown-item" href="#">question libre</a>
+                                                                                                                                                    <div class="dropdown-divider"></div>
+                                                                                                                                                              <a class="dropdown-item" href="#">Something else here</a>
+                                                                                                                                                                      </div>
+                                                                                                                                                                            </li>
+                                                                                                                                                                                  <li class="nav-item">
+                                                                                                                                                                                            <a class="nav-link disabled" href="#">Disabled</a>
+                                                                                                                                                                                                  </li>
+                                                                                                                                                                                                      </ul>
+
+                                                                                                                                                                                                                              </div>
+    </nav>
+    <%= yield %>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>

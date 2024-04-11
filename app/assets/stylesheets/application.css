@@ -13,3 +13,17 @@
  *= require_tree .
  *= require_self
  */
+.myicon,#myicon {
+		color: white;
+			background: rgb(240, 142, 242);
+				letter-spacing: -6px;
+					width: 29px;
+						display: block;
+					}
+					.demande1 .myicon{
+						float:left;
+					}
+					.dropdown-item.demande1 {
+							display: flex;
+								text-justify: auto;
+							}

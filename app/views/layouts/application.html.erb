@@ -14,7 +14,7 @@
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">Navbar</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                   </button>
                                                                                                                                                                                                           <form class="form-inline my-2 my-lg-0">
@@ -31,23 +31,20 @@
                                                                   <a class="nav-link" href="#">Link</a>
                                                                         </li>
                                                                               <li class="nav-item dropdown">
-                                                                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                                                                     Demander
                                                                                                             </a>
                                                                                                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                                                                                                       choisir un modèle de question
-                                                                                                                                <a class="dropdown-item" href="#">comment dit on cela</a>
-                                                                                                                                <a class="dropdown-item" href="#">est-ce que ça semble naturel</a>
-                                                                                                                                          <a class="dropdown-item" href="#">journal de langue étrangère</a>
-                                                                                                                                          <a class="dropdown-item" href="#">qu'est-ce que cela signifie</a>
-                                                                                                                                          <a class="dropdown-item" href="#">quelle est la différence</a>
-                                                                                                                                          <a class="dropdown-item" href="#">veuillez me montrer des exemples de phrases contenant ~~</a>
-                                                                                                                                          <a class="dropdown-item" href="#">veuillez me montrer comment se prononce</a>
-                                                                                                                                          <a class="dropdown-item" href="#">comment qualifiez vous ma prononciation</a>
-                                                                                                                                          <a class="dropdown-item" href="#">posez une question à propos d'un pays ou d'une région</a>
-                                                                                                                                          <a class="dropdown-item" href="#">question libre</a>
+                                                                                                                                          <%Demande.all.each do |demande|%>
+                                                                                                                                            <a class="dropdown-item demande1" href="/demande/<%=demande.id%>/1truc"><span style="color:white;background:<%= demande.icon %>;" class="myicon">
+                                                                                                                                                <%= demande.image.html_safe %></span>
+                                                                                                                                                      <span class="name1">
+                                                                                                                                                <%= demande.name %>
+                                                                                                                                                          </span></a>
+                                                                                                                                          <%end%>
                                                                                                                                                     <div class="dropdown-divider"></div>
-                                                                                                                                                              <a class="dropdown-item" href="#">Something else here</a>
+                                                                                                                                                              <a class="dropdown-item" href="/demande/new">ajouter un modèle de question</a>
                                                                                                                                                                       </div>
                                                                                                                                                                             </li>
                                                                                                                                                                                   <li class="nav-item">
@@ -58,6 +55,9 @@
                                                                                                                                                                                                                               </div>
     </nav>
     <%= yield %>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/heyjs1.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
 </html>

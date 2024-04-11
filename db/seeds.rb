@@ -7,3 +7,15 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+[{"name"=>"comment dit on cela", "image"=>"&#63;", "icon"=>"#67e164"},
+   {"name"=>"est-ce que cela semble naturel", "image"=>"&#9745;", "icon"=>"#41d8d3"},
+     {"name"=>"journal de langue étrangère", "image"=>"&#128394;", "icon"=>"#f5a963"},
+       {"name"=>"qu'est-ce que cela signifie", "image"=>"&#128280;", "icon"=>"#eb2c91"},
+         {"name"=>"quelle est la différence", "image"=>"&#9711; &#9711;", "icon"=>"#f08ef2"},
+           {"name"=>"montrez moi des examples de phrases contenant", "image"=>"&#128462;", "icon"=>"#da0e0e"},
+             {"name"=>"Veuillez me montrer comment se prononce", "image"=>"&#128265;", "icon"=>"#e754c9"},
+               {"name"=>"comment qualifierez vous ma prononciation", "image"=>"&#x1F50A;", "icon"=>"#0e1ee4"},
+                 {"name"=>"poser uen question à propos d'un pays ou d'une région", "image"=>"&#127758;", "icon"=>"#e69bec"},
+                   {"name"=>"question libre", "image"=>"&#x1F469;", "icon"=>"#dcfa0c"}].each do |demande|
+                    Demande.find_or_create_by!(demande)
+end

@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  demande_id: 1
+  content: MyText
+  pic: MyString
+  rec: MyString
+  info: MyText
+  user_id: 1
+
+two:
+  demande_id: 1
+  content: MyText
+  pic: MyString
+  rec: MyString
+  info: MyText
+  user_id: 1

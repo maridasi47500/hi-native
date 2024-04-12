@@ -1,0 +1,16 @@
+<p>choisir un modèle de question</p>
+<ul>
+
+                                                      <%Demande.all.each do |demande|%>
+
+                                                        <li><a class="demande1" href="/demande/<%=demande.id%>/1truc"><span style="color:white;background:<%= demande.icon %>;" class="myicon">
+
+                                                                                                                                                                                <%= demande.image.html_safe %></span>
+
+                                                                                                                                                                                    <span class="name1">
+
+                                                                                                                                                                                                                                                  <%= demande.name %>
+                                                                                                                                                                                    </span></a></li>
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                  <%end%>
+</ul>

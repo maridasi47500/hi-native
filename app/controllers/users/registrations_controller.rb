@@ -5,9 +5,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
   before_action :configure_account_update_params, only: [:update]
 
   # GET /resource/sign_up
-  def new
-     super
-  end
+  #def new
+  #   super
+  #end
 
   # POST /resource
   # def create
@@ -42,12 +42,12 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # If you have extra params to permit, append them to the sanitizer.
   def configure_sign_up_params
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:username,:native_languages_attributes=>{}, :study_languages_attributes=>{},:profile_attributes=>{},:user_interested_countries=>{}])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:username,:native_languages_attributes=>[:learning_level_id,:language_id], :study_languages_attributes=>[:learning_level_id,:language_id],:profile_attributes=>[:country_id],:user_interested_countries_attributes=>[:country_id]])
   end
 
   # If you have extra params to permit, append them to the sanitizer.
   def configure_account_update_params
-    devise_parameter_sanitizer.permit(:account_update, keys: [:username,:native_languages_attributes=>{}, :study_languages_attributes=>{},:profile_attributes=>{},:user_interested_countries=>{}])
+    devise_parameter_sanitizer.permit(:account_update, keys: [:username,:native_languages_attributes=>[:learning_level_id,:language_id], :study_languages_attributes=>[:learning_level_id,:language_id],:profile_attributes=>[:country_id],:user_interested_countries_attributes=>[:country_id]])
   end
 
   # The path used after sign up.

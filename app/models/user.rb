@@ -12,9 +12,17 @@ class User < ApplicationRecord
   has_many :user_interested_countries
   accepts_nested_attributes_for :user_interested_countries
   after_initialize do
-     self.native_languages.new
-     self.study_languages.new
-     self.profile=Profile.new
-     self.user_interested_countries.new
+     y=self.native_languages.build
+     y.build_learning_level
+     y.build_language
+     z=self.study_languages.build
+     z.build_learning_level
+     z.build_language
+     
+     x=Profile.new
+     x.build_country
+     self.profile=x
+     w=self.user_interested_countries.build
+     w.build_country
   end
 end

@@ -29,4 +29,8 @@ end
 @langues[..-2].each do |hey|
   p hey
                     Language.find_or_create_by!(name: hey)
+
 end
+LearningLevel.find_or_create_by!(name: "debutant", description:"debuutant")
+LearningLevel.find_or_create_by!(name: "intermediaire", description:"intermediaire")
+LearningLevel.find_or_create_by!(name: "avancé", description:"avancé")

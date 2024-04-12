@@ -30,10 +30,20 @@
                                                         <li class="nav-item">
                                                                   <a class="nav-link" href="#">Link</a>
                                                                         </li>
+                                                                        <%if user_signed_in?%>
                                                                               <li class="nav-item dropdown">
-                                                                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                                        <button class="nav-link dropdown-toggle dropdown-toggle-split" id="navbarDropdown" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                                                    &#128105;
+                                                                                                            </button>
+                                                                                                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                                                                                      <%= button_to "Se déconnecter", destroy_user_session_path, method: :delete, class:"dropdown-item" %>                           
+                                                                                                                    </div>
+                                                                                                                                                                            </li>
+                                                                                                                                                                          <%end%>
+                                                                              <li class="nav-item dropdown">
+                                                                                        <button class="nav-link dropdown-toggle dropdown-toggle-split" id="navbarDropdown" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                                                                     Demander
-                                                                                                            </a>
+                                                                                                            </button>
                                                                                                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                                                                                                       choisir un modèle de question
                                                                                                                                           <%Demande.all.each do |demande|%>
@@ -50,6 +60,7 @@
                                                                                                                                                                                   <li class="nav-item">
                                                                                                                                                                                             <a class="nav-link disabled" href="#">Disabled</a>
                                                                                                                                                                                                   </li>
+                                                                                                                                                                                                  <%if !user_signed_in?%>
                                   <li class="nav-item active">
                                     <%=
                                           link_to_unless_current("Connexion", "/users/sign_in", class:"nav-link") do
@@ -57,6 +68,7 @@
                                                      end
                                                       %>
                                                   </li>
+                                                <%end%>
                                                                                                                                                                                                       </ul>
 
                                                                                                                                                                                                                               </div>

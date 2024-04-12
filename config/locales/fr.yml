@@ -14,12 +14,12 @@ fr:
         country_id:
           "Pays et régions qui vous intéressent Requis"
       native_language:
-        language_level_id:
+        learning_level_id:
           "niveau"
         language_id:
           "Langue maternelle Requis"
       study_language:
-        language_level_id:
+        learning_level_id:
           "niveau"
         language_id:
           "Langue qui vous intéresse Requis"

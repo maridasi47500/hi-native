@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Study languages</h1>
+
+<div id="study_languages">
+  <% @study_languages.each do |study_language| %>
+    <%= render study_language %>
+    <p>
+      <%= link_to "Show this study language", study_language %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New study language", new_study_language_path %>

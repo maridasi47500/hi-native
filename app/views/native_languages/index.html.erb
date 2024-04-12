@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Native languages</h1>
+
+<div id="native_languages">
+  <% @native_languages.each do |native_language| %>
+    <%= render native_language %>
+    <p>
+      <%= link_to "Show this native language", native_language %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New native language", new_native_language_path %>

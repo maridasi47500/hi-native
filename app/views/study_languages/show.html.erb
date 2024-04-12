@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @study_language %>
+
+<div>
+  <%= link_to "Edit this study language", edit_study_language_path(@study_language) %> |
+  <%= link_to "Back to study languages", study_languages_path %>
+
+  <%= button_to "Destroy this study language", @study_language, method: :delete %>
+</div>

@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @learning_level %>
+
+<div>
+  <%= link_to "Edit this learning level", edit_learning_level_path(@learning_level) %> |
+  <%= link_to "Back to learning levels", learning_levels_path %>
+
+  <%= button_to "Destroy this learning level", @learning_level, method: :delete %>
+</div>

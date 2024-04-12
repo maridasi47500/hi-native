@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  resources :user_interested_countries
+  resources :study_languages
+  resources :native_languages
+  resources :profiles
+  resources :learning_levels
+  resources :countries
+  devise_for :users, controllers: { sessions: 'users/sessions', registrations: 'users/registrations' }
   resources :posts
   resources :demandes, path: "demande" do
     member do

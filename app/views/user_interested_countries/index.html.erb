@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>User interested countries</h1>
+
+<div id="user_interested_countries">
+  <% @user_interested_countries.each do |user_interested_country| %>
+    <%= render user_interested_country %>
+    <p>
+      <%= link_to "Show this user interested country", user_interested_country %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New user interested country", new_user_interested_country_path %>

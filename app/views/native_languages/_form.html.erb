@@ -1,0 +1,32 @@
+<%= form_with(model: native_language) do |form| %>
+  <% if native_language.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(native_language.errors.count, "error") %> prohibited this native_language from being saved:</h2>
+
+      <ul>
+        <% native_language.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :user_id, style: "display: block" %>
+    <%= form.number_field :user_id %>
+  </div>
+
+  <div>
+    <%= form.label :language_id, style: "display: block" %>
+    <%= form.number_field :language_id %>
+  </div>
+
+  <div>
+    <%= form.label :learning_level_id, style: "display: block" %>
+    <%= form.number_field :learning_level_id %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

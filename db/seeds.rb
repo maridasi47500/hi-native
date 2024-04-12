@@ -1,4 +1,5 @@
 # This file should ensure the existence of records required to run the application in every environment (production,
+require "./pays"
 # development, test). The code here should be idempotent so that it can be executed at any point in every environment.
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
 #
@@ -18,4 +19,14 @@
                  {"name"=>"poser uen question à propos d'un pays ou d'une région", "image"=>"&#127758;", "icon"=>"#e69bec"},
                    {"name"=>"question libre", "image"=>"&#x1F469;", "icon"=>"#dcfa0c"}].each do |demande|
                     Demande.find_or_create_by!(demande)
+end
+
+
+@pays.each do |hey|
+  p hey
+                    Country.find_or_create_by!(name: hey)
+end
+@langues[..-2].each do |hey|
+  p hey
+                    Language.find_or_create_by!(name: hey)
 end

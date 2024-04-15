@@ -1,32 +1,97 @@
-<div id="<%= dom_id post %>">
+<div class="mytooltip" >
+<div class="mypost sometooltip" id="<%= dom_id post %>">
   <p>
-    <strong>Demande:</strong>
-    <%= post.demande_id %>
+  <span class="left"><%=post.user.username%></span>
+  <span class="right">
+
+  <%=time_ago_in_words(post.created_at)%>
+  </span>
+  </p>
+  <p>
+    &#128488; <%= post.user.native_languages.first.language.name%>
+  </p>
+  <p>
+  &#9998; <% post.user.study_languages.each do |hey|%> 
+
+  <span><%=hey.language.name%> </span>
+
+    <%LearningLevel.all.each_with_index do |hi,i|%>
+      <span class="mylanguage mylanguage<%=i%> <%=hi.id <= hey.learning_level_id ? "hey" : ""%>">|</span>
+  <%end%>
+
+  <%end%>
+  </p>
+  <p>
+    Question à propos de 
+    <strong><%=post.language.name%></strong>
+
+  </p>
+  <p>
+  <%case post.demande_id%>
+  <%when 1%>
+    <span class="mademande">qu'est-ce que  c'est en <%=post.language.name%></span>
+  <%= post.content %>
+  <%when 2%>
+
+  <%= post.content %>
+    <span class="mademande">est-ce que ça semble naturel ?</span>
+  <%when 3%>
+    <span class="mademande">journal:</span>
+
+  <%= post.content %>
+  <%when 4%>
+    <span class="mademande">que signifie</span>
+
+  <%= post.content %>
+  <%when 5%>
+    <span class="mademande">quelle est la différence entre</span>
+
+  <%= post.content %>
+    <span class="mademande">?</span>
+  <%when 6%>
+    <span class="mademande">veuillez me montrer des exemples de phrases contenant</span>
+
+  <%= post.content %>
+  <%when 7%>
+    <span class="mademande">veuillez me montrer comment se prononce</span>
+
+  <%= post.content %>
+  <%when 8%>
+    <span class="mademande">comment qualifierez vous ma prononciation?</span>
+
+  <%= post.content %>
+  <%when 9%>
+    <span class="mademande">question à propos d'un pays ou d'une région</span>
+
+  <%= post.content %>
+  <%when 10%>
+
+  <%= post.content %>
+
+  <%end%>
   </p>
 
-  <p>
-    <strong>Content:</strong>
-    <%= post.content %>
-  </p>
 
-  <p>
-    <strong>Pic:</strong>
-    <%= post.pic %>
-  </p>
+  <%if post.pic%>
+  <p class="picrec">
 
-  <p>
-    <strong>Rec:</strong>
-    <%= post.rec %>
+  <img class="mypic" src ="/uploads/<%= post.pic %>"/>
   </p>
+<%end%>
+  <%if post.rec%>
 
+  <p class="picrec">
+  <audio src="/uploads/<%= post.rec %>" controls/>
+  </p>
+<%end%>
+
+<%if post.info.length > 0 %>
   <p>
-    <strong>Info:</strong>
+    <strong>Plus d'Infos:</strong>
     <%= post.info %>
   </p>
+<%end%>
 
-  <p>
-    <strong>User:</strong>
-    <%= post.user_id %>
-  </p>
 
+</div>
 </div>

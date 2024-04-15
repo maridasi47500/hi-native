@@ -10,6 +10,17 @@ fr:
       profile:
         country_id:
           "Pays ou région que vous connaissez bien Requis"
+      post:
+        info:
+          "Information aditionnelle : écrivez des informations aditionnelles ici. vous pouvez écrire dans la langue de votre choix"
+        rec:
+          "Cliquez pour enregistrer une réponse orale"
+        pic:
+          "Charger une image"
+        language_id:
+          "Cette question est à propos de?"
+        content:
+          "Ecrivez un mot, bout de phrase ou une phrase complète"
       user_interested_country:
         country_id:
           "Pays et régions qui vous intéressent Requis"

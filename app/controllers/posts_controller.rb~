@@ -1,7 +1,6 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user!, only: [:create,:update,:edit,:new]
+  before_action :authenticate_user!
   before_action :set_post, only: %i[ show edit update destroy ]
-  protect_from_forgery except:[:create]
 
 
   # GET /posts or /posts.json
@@ -68,6 +67,6 @@ class PostsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def post_params
-      params.require(:post).permit(:demande_id, :content, :pic, :rec, :info, :user_id,:language_id)
+      params.require(:post).permit(:demande_id, :content, :pic, :rec, :info, :user_id)
     end
 end

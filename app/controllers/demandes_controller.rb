@@ -1,5 +1,6 @@
 class DemandesController < ApplicationController
   before_action :set_demande, only: %i[ show edit update destroy _1truc]
+  before_action :authenticate_user!, only: [:_1truc]
 
   # GET /demandes or /demandes.json
   def _1truc

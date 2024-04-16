@@ -7,7 +7,7 @@
   <%=time_ago_in_words(post.created_at)%>
   </span>
   </p>
-  <p>
+  <p class="nativelanguage">
     &#128488; <%= post.user.native_languages.first.language.name%>
   </p>
   <p>
@@ -109,6 +109,10 @@
     <%= post.info %>
   </p>
 <%end%>
+<p>
+<%=link_to "lire ce post",post%>
+
+</p>
 
 
 </div>

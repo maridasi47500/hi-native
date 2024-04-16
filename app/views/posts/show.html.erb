@@ -1,13 +1,19 @@
 <p style="color: green"><%= notice %></p>
 
 <%= render @post %>
+<%= render @post.comments %>
+<div id="heymypost"></div>
+<%if user_signed_in?%>
 <div id="my_comment_form">
   <%= render "comments/form", comment: @comment %>
 </div>
 
+<%if @post.user_id==current_user.id%>
 <div>
   <%= link_to "Edit this post", edit_post_path(@post) %> |
   <%= link_to "Back to posts", posts_path %>
 
   <%= button_to "Destroy this post", @post, method: :delete %>
 </div>
+<%end%>
+<%end%>

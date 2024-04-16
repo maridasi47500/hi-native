@@ -1,0 +1,9 @@
+<p>rechercher : <%=params[:search]%></p>
+<%if @posts.length > 0%>
+<%=render @posts%>
+<%else%>
+  <p>
+  <p>aucun post trouvé.</p>
+
+  </p>
+<%end%>

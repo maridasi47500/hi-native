@@ -25,8 +25,8 @@ function diffString( o, n ) {
   n = n.replace(/\s+$/, '');
 
   var out = diff(o == "" ? [] : o.split(/\s+/), n == "" ? [] : n.split(/\s+/) );
-  var str1 = "";
-  var str2 = "";
+  var str1 = "&#10060; ";
+  var str2 = "&#10003; ";
 
   var oSpace = o.match(/\s+/g);
   if (oSpace == null) {
@@ -166,5 +166,13 @@ function diff( o, n ) {
 console.log(diffString("Bonjour !!!","Bon jour !!!"))
 
 $(function(){
+	if(document.getElementById("app1")){
 	document.getElementById("app1").innerHTML+=diffString("I want to know do there good shop to buy the souvenir near by", "I want to know if there are any good places to buy souvenirs nearby.");
+	}
+	var div1;
+	var divs1=document.getElementsByClassName("naturel");
+	for (var i = 0;i<divs1.length;i++){
+	div1=divs1[i];
+	div1.innerHTML=diffString(div1.dataset.naturel,div1.innerHTML);
+	}
 });

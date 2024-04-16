@@ -1,0 +1,67 @@
+ #my_comment_form {
+
+
+	                                                             position: fixed;
+
+
+								                                                                         bottom: 0;
+
+
+																	                                                                             width: 100%;
+
+
+																										                                                                                         background: white;
+
+
+																																					                                                                                             border-top: 1px solid;
+
+
+																																																                                                                                                         height: 148px;
+
+
+																																																													                                                                                             }
+																																																																								     #comment_content {
+																																																																									     	float: left;
+																																																																										height:130px;
+																																																																											margin: 0 auto;
+																																																																												display: flex;
+																																																																													left: 10%;
+																																																																														width: 60%;
+																																																																															position: absolute;
+																																																																																top: 10%;
+																																																																															}
+																																																																															input[type="submit"] {
+																																																																																	display: flex;
+																																																																																		/* float: left; */
+																																																																																		position: relative;
+																																																																																			float: left;
+																																																																																				left: 12%;
+																																																																																					top: 0%;
+																																																																																				}
+																																																																																				#form_comment {
+																																																																																						height: 100%;
+																																																																																					}
+																																																																																					#form_comment .field {
+																																																																																							float: left;
+																																																																																								width: 70%;
+																																																																																									height: 100%;
+																																																																																								}
+																																																																																								#form_comment .actions {
+																																																																																										float: left;
+																																																																																											height: 100%;
+																																																																																												width: 30%;
+																																																																																												padding-top:15px;
+																																																																																											}
+																																																																																											.nativelanguage {
+																																																																																													width: 100%;
+																																																																																														text-align: left;
+																																																																																															padding: 0;
+																																																																																																margin: 0;
+																																																																																																	float: left;
+																																																																																																}
+																																																																																																#heymypost{
+																																																																																																	float:left;
+																																																																																																	height:600px;
+																																																																																																	width:100%;
+
+																																																																																																}

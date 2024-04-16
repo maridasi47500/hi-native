@@ -1,17 +1,35 @@
-<div id="<%= dom_id comment %>">
+<div class="mytooltip" >
+<div class="mycomment sometooltip" id="<%= dom_id comment %>">
   <p>
-    <strong>Post:</strong>
-    <%= comment.post_id %>
+  <span class="left"><%=comment.user.username%></span>
+  <span class="right">
+
+  <%=time_ago_in_words(comment.created_at)%>
+  </span>
+  </p>
+  <p class="nativelanguage">
+    &#128488; <%= comment.user.native_languages.first.language.name%>
   </p>
 
+  <%case comment.post.demande_id%>
+  <%when 2%>
+    <p class="naturel" data-naturel="<%=comment.post.content%>">
+
+  <%= comment.content %>
+    
+  </p>
+  <%else%>
   <p>
-    <strong>User:</strong>
-    <%= comment.user_id %>
+
+  <%= comment.content %>
   </p>
 
-  <p>
-    <strong>Content:</strong>
-    <%= comment.content %>
-  </p>
+  <%end%>
 
+
+
+
+
+
+</div>
 </div>

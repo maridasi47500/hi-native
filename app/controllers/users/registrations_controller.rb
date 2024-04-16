@@ -42,7 +42,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # If you have extra params to permit, append them to the sanitizer.
   def configure_sign_up_params
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:username,:native_languages_attributes=>[:learning_level_id,:language_id], :study_languages_attributes=>[:learning_level_id,:language_id],:profile_attributes=>[:country_id],:user_interested_countries_attributes=>[:country_id]])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:username,:native_languages_attributes=>{}, :study_languages_attributes=>{},:profile_attributes=>{},:user_interested_countries_attributes=>{}])
   end
 
   # If you have extra params to permit, append them to the sanitizer.

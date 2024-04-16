@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :comments
   resources :user_interested_countries
   resources :study_languages
   resources :native_languages

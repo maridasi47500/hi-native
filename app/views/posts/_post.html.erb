@@ -81,9 +81,27 @@
   <%if post.rec%>
 
   <p class="picrec">
-  <audio src="/uploads/<%= post.rec %>" controls/>
+  <figure class="audioContainer" data-fullscreen="false">
+    <audio hidden class="audio" controls onloadedmetadata="document.getElementsByClassName('progress<%=post.id%>')[0].max=Number(this.duration*100)" ontimeupdate="document.getElementsByClassName('progress<%=post.id%>')[0].value=Number(this.currentTime*100);" preload="metadata" src="/uploads/<%=post.rec%>" ></audio>
+                                                                                              <!-- Offer download -->
+                                                                                                    <a href="/uploads/<%=post.rec%>">Download recording</a>
+                                                                                                        </audio>
+    <div class="audio-controls" class="controls" data-state="hidden">
+        <button class="playpause" type="button" data-state="play">Play/Pause</button>
+          <button class="stop" type="button" data-state="stop">Stop</button>
+            <div class="progress">
+              <progress class="myprogress progress progress<%=post.id%>" value="0" min="0" style="width:100%;">
+                          <span class="progress-bar"></span>
+                              </progress>
+                                </div>
+                                  <button class="mute" type="button" data-state="mute">Mute/Unmute</button>
+                                    <button class="volinc" type="button" data-state="volup">Vol+</button>
+                                      <button class="voldec" type="button" data-state="voldown">Vol-</button>
+    </div>
+
   </p>
 <%end%>
+  </figure>
 
 <%if post.info.length > 0 %>
   <p>

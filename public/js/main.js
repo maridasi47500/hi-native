@@ -208,4 +208,7 @@ function initAudio() {
         });
 }
 
+if (window.location.pathname.includes("/demande") && window.location.pathname.includes("/1truc")){
+	console.log("hey ");
 window.addEventListener('load', initAudio );
+}

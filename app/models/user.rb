@@ -11,20 +11,20 @@ class User < ApplicationRecord
   accepts_nested_attributes_for :profile
   has_many :user_interested_countries
   accepts_nested_attributes_for :user_interested_countries
-  after_initialize do
+  def myfunc 
     if !self.persisted?
-     y=self.native_languages.build
-     y.build_learning_level
-     y.build_language
-     z=self.study_languages.build
-     z.build_learning_level
-     z.language=Language.new
-     
-     x=Profile.new
-     x.build_country
-     self.profile=x
-     w=self.user_interested_countries.build
-     w.build_country
+      y=self.native_languages.build(learning_level: LearningLevel.new, language: Language.new)
+      #y.learning_level_id=""
+      #y.language_id=""
+      z=self.study_languages.build(learning_level: LearningLevel.new, language: Language.new)
+      #z.learning_level_id=""
+      #z.language_id=""
+      
+      #x=Profile.new(country: Country.new)
+      #x.country_id=""
+      self.build_profile(country: Country.new)
+      w=self.user_interested_countries.build(country:Country.new)
+      #w.country_id=""
     end
   end
 end

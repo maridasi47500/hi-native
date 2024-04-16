@@ -1,25 +1,10 @@
-# README
+# bienvenue sur hi native
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+* avec une langue etrangere et langue detude, on peut converse sur pays ou region qui minteresse ou des questions sur 1 langue étrangère.
 
-* Ruby version
+* demander coent ca se dit en anglais, quelle eta la difference, que signifie, cela semble naturel ?
 
-* System dependencies
+* il y a 1 connexion avec 1 compte
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# hi-native
+* enjoy
